@@ -1,6 +1,6 @@
 # Mr. Twins 🚬
-Ficticious Website developed to simulating a cigar \
-enterprise that serve premium cigar boxes arount the world.
+Ficticious Website developed to simulating a enterprise \
+ that serve premium cigar boxes around the world.
 
 Live demo: (https://gitbiohazard.github.io/projects/MT/)
 
