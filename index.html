@@ -1,43 +1,229 @@
-<!-- standard-website-template
+<!-- 
 @author Luiz Felipe Pedrosa Cavalcante
 gitHub - @gitBiohazard
 sources:
-    Greensock
     Bootstrap v5
     html5shiv.js
-    Fontawesome
+    GSAP v3.9.1
+    Three.js
+    TweenMax.js
+    HoverEffect.js
 -->
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--[if lt IE 9]>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>
 		<![endif]-->
 
-    <!-- CSS -->
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/index.css">
-    <title>DevSpec v2</title>
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+      <link rel="stylesheet" href="css/snackbar.css">
+      <link rel="stylesheet" href="css/index.css">
+      <title>Mr. Twins</title>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    <!-- JavaScript -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <div id="snackbar">Links disabled in preview</div>
+    <nav class="nav">
+            <div class="container">
+                  <div class="nav__content">
+                        <div class="nav__content__logo">
+                              <a href="#" class="nav__content__logo__link">Mr. Twins</a>
+                        </div>
+                        <div class="nav__content__links">
+                        </div>
+                        <div class="nav__content__search">
+                              <a href="#" class="nav__content__search__link">
+                                    Search
+                                    <img src="img/Search.svg" class="nav__content__search__link__icon">
+                              </a>
+                        </div>
+                  </div>
+            </div>
+      </nav>
+      <div class="main">
+            <div class="main__row row">
+                  <div class="main__row__col main__row__col__left col-lg">
+                        <p class="main__row__col__left__sub">
+                              Cigarettes & Cigars
+                        </p>
+                        <h1 class="main__row__col__left__title">
+                              Original Twins Cigar
+                        </h1>
+                        <div>
+                              <p class="main__row__col__left__sub">
+                                    6 UNITIES PER BOX
+                              </p>
+                              <p class="main__row__col__left__text">
+                                    Get your Twins Cigar Original now and enjoy life, <br> and really feel alive.
+                              </p>
+                        </div>
+                        <div class="main__row__col__left__price">
+
+                              <button class="main__row__col__left__price__cart">Get it now</button>
+                        </div>
+                  </div>
+                  <div class="main__row__col main__row__col__right col-lg">
+                        <!-- <h1 class="main__row__col__right__title">Montserrat Twins</h1> -->
+                        <div class="main__row__col__right__wrapper"></div>
+                  </div>
+            </div>
+      </div>
+
+      <div class="gallery">
+            <div class="gallery__content">
+                  <h1 class="gallery__content__title">
+                        Smoke, sweet smoke
+                  </h1>
+                  <div class="row d-flex justify-content-around">
+                        <div class="col-lg-5">
+                              <div class="gallery__content__box gallery__content__box__left">
+                                    <div class="gallery__content__box__left__item" data-slider-item="0"></div>
+                                    <div class="gallery__content__box__left__item" data-slider-item="1"></div>
+                                    <div class="gallery__content__box__left__item" data-slider-item="2"></div>
+                                    <div class="gallery__content__box__left__item" data-slider-item="3"></div>
+                                    <div class="gallery__content__box__left__item" data-slider-item="4"></div>
+                                    <div class="gallery__content__box__left__item" data-slider-item="5"></div>
+                              </div>
+                        </div>
+                        <div class="col-lg-7">
+                              <div class="gallery__content__box gallery__content__box__right">
+                                    <div class="details">
+                                          <h1 class="gallery__content__box__right__title"></h1>
+                                          <h4 class="gallery__content__box__right__subtitle"></h4>
+                                          <p class="gallery__content__box__right__description">
+                                          </p>
+                                          <div class="w-100 buttons">
+                                                <button class="gallery__content__box__right__control__prev"><span
+                                                            class="arrow">
+                                                            <- </span>Prev</button>
+                                                &nbsp;<span class="point">♣</span>&nbsp;
+                                                <button class="gallery__content__box__right__control__next">Next<span
+                                                            class="arrow"> -></span></button>
+
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <div class="contact">
+            <div class="contact__row row">
+                  <div class="contact__row__col contact__row__col__left col-lg">
+                        <div class="contact__row__col__left__wrapper"></div>
+                  </div>
+                  <div class="contact__row__col contact__row__col__right col-lg">
+                        <h1 class="contact__row__col__right__title">
+                              Get in touch
+                        </h1>
+                        <p class="contact__row__col__right__subtitle">
+                              Leave your data below that we will <br> contact you as soon as possible.
+                        </p>
+                        <form class="contact__row__col__right__form">
+                              <h2 class="contact__row__col__right__label">Name</h2>
+                              <input type="text" class="contact__row__col__right__input mb-5" required>
+                              <h2 class="contact__row__col__right__label">E-mail</h2>
+                              <input type="text" class="contact__row__col__right__input mb-5" required>
+                              <h2 class="contact__row__col__right__label">Order</h2>
+                              <input type="text" class="contact__row__col__right__input mb-5" required>
+                              <button class="contact__row__col__right__button" onclick="console.log('Send!')">Send</button>
+                        </form>
+                  </div>
+            </div>
+      </div>
+
+      <footer class="footer">
+            <div class="footer__links">
+                  <a href="#" class="footer__links__link">Main website</a>
+                  <a href="#" class="footer__links__link">Features</a>
+                  <a href="#" class="footer__links__link">contact</a>
+                  <a href="#" class="footer__links__link">Back to top</a>
+            </div>
+            <h1 class="footer__copyright">
+                  Developed with love by <button onclick="window.open('https://github.com/gitBiohazard')">@gitBiohazard</button>
+            </h1>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+      <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+      <script src="js/hover-effect.umd.js"></script>
+      <script src="js/index.js"></script>
+
+      <script>
+            var hoverDistort = new hoverEffect({
+                  parent: document.querySelector('.main__row__col__right__wrapper'),
+                  intensity: 0.5,
+                  image1: 'img/cape__one.png',
+                  image2: 'img/cape__two.png',
+                  displacementImage: 'img/2.png'
+            });
+
+            var hoverDistort = new hoverEffect({
+                  parent: document.querySelector('[data-slider-item="0"]'),
+                  intensity: 0.5,
+                  image1: 'img/data__item__1__one.png',
+                  image2: 'img/data__item__1__two.png',
+                  displacementImage: 'img/1.jpg'
+            });
+
+            var hoverDistort = new hoverEffect({
+                  parent: document.querySelector('[data-slider-item="1"]'),
+                  intensity: 0.5,
+                  image1: 'img/data__item__2__one.png',
+                  image2: 'img/data__item__2__two.png',
+                  displacementImage: 'img/2.png'
+            });
+
+            var hoverDistort = new hoverEffect({
+                  parent: document.querySelector('[data-slider-item="2"]'),
+                  intensity: 0.5,
+                  image1: 'img/data__item__3__one.png',
+                  image2: 'img/data__item__3__two.png',
+                  displacementImage: 'img/3.jpg'
+            });
+
+            var hoverDistort = new hoverEffect({
+                  parent: document.querySelector('[data-slider-item="3"]'),
+                  intensity: 0.5,
+                  image1: 'img/data__item__4__one.png',
+                  image2: 'img/data__item__4__two.png',
+                  displacementImage: 'img/4.jpg'
+            });
+
+            var hoverDistort = new hoverEffect({
+                  parent: document.querySelector('[data-slider-item="4"]'),
+                  intensity: 0.5,
+                  image1: 'img/data__item__5__one.png',
+                  image2: 'img/data__item__5__two.png',
+                  displacementImage: 'img/5.jpg'
+            });
+
+            var hoverDistort = new hoverEffect({
+                  parent: document.querySelector('[data-slider-item="5"]'),
+                  intensity: 0.5,
+                  image1: 'img/data__item__6__one.png',
+                  image2: 'img/data__item__6__two.png',
+                  displacementImage: 'img/6.jpg'
+            });
+
+            var hoverDistort = new hoverEffect({
+                  parent: document.querySelector('.contact__row__col__left__wrapper'),
+                  intensity: 0.5,
+                  image1: 'img/contact__one.png',
+                  image2: 'img/contact__two.png',
+                  displacementImage: 'img/2.png'
+            });
+      </script>
 </body>
 
 </html>

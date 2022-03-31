@@ -1,37 +1,522 @@
-/* 
- * standard-website-template
- * @author Luiz Felipe Pedrosa Cavalcante
- * gitHub - @gitBiohazard
- * sources:
- *     Greensock
- *     Bootstrap v5
- *     html5shiv.js
- *     Fontawesome 
- *     
-*/
+/*
+ * @author Lufe Pedrosa
+ * @gitHub gitBiohazard
+ *
+ */
 
-
- /* Extra small devices (portrait phones, less than 576px) */
- @media (max-width: 575.98px) {
-
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-		
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-		
-}
+/* Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-		
+@media (max-width: 991.98px) {
+    html, body {
+        font-size: calc(100vw / 1920 * 22) !important;
+    }
+    
+    .main__row__col__left {
+        align-content: center !important;
+        text-align: center !important;
+        height: 100vh !important;
+    }
+    .main__row__col__right {
+        display: none !important;
+    }
+    .gallery__content__box__right {
+        background: transparent !important;
+        height: 120% !important;
+        width: 100% !important;
+        margin-top: 4rem;
+        margin-left: 0 !important;
+    }
+    .contact {
+        height: auto !important;
+    }
+    .contact__row__col__left {
+        height: 50vh !important;
+    }
+    .contact__row__col__right {
+        align-content: center !important;
+        background: #0a0a0c !important;
+        height: 80vh !important;
+    }
+    .contact__row__col__right__title {
+        height: max-content !important;
+        padding: 4rem 0 !important;
+        margin-bottom: 6rem !important;
+    }
+    .contact__row__col__right__subtitle {
+        height: max-content !important;
+        margin-bottom: 6rem !important;
+    }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
 
+/* Universal */
+
+html, body {
+    font-size: calc(100vw / 1920 * 10);
+    background: #eeeeee;
+    overflow-x: hidden;
+    height: 100vh;
+    padding: 0%;
+    width: 100%;
+    margin: 0%;
+}
+
+* {
+    user-select: none;
+}
+
+@font-face {
+    font-family: 'Glimmer';
+    src: url('../fonts/glimmer.woff2') format('woff2'),
+        url('../fonts/glimmer.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Nav */
+
+.nav__content {
+    justify-content: space-between;
+    mix-blend-mode: difference;
+    align-items: center;
+    position: fixed;
+    z-index: 1031;
+    display: flex;
+    height: 6rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav__content__logo__link {
+    mix-blend-mode: difference;
+    font-family: 'Glimmer';
+    text-decoration: none;
+    padding-left: 2rem;
+    color: #afafaf;
+    font-size: 3rem;
+}
+
+.nav__content__logo__link:hover {
+    color: #afafaf;
+    opacity: 1;
+}
+
+.nav__content__search__link {
+    font-family: 'George X';
+    text-decoration: none;
+    padding-right: 2rem;
+    color: #afafaf;
+    font-size: 3rem;
+    padding: .5rem;
+}
+
+.nav__content__search__link__icon {
+    margin-bottom: .5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: 1.6rem;
+    opacity: .5;
+}
+
+.nav__content__search__link:hover {
+    color: white;
+}
+
+/* Main */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: #0a0a0c;
+}
+
+.main__row {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.main__row__col__right {
+    padding: 0 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.main__row__col__right__title {
+    mix-blend-mode: color-dodge;
+    font-family: 'Glimmer';
+    position: absolute;
+    color: #a3a3a3;
+    font-size: 16rem;
+    text-align: end;
+    z-index: 1000;
+    opacity: .6;
+    bottom: 5%;
+    right: 5%;
+}
+
+.main__row__col__right__wrapper {
+    height: 100vh;
+}
+
+.main__row__col__left {
+    justify-content: center;
+    padding: 0 !important;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.main__row__col__left__sub {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 100;
+    color: #262626;
+}
+
+.main__row__col__left__title {
+    font-family: 'Glimmer';
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    -webkit-text-stroke: .05rem;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    font-size: 6rem;
+}
+
+.main__row__col__left__text {
+    font-family: 'George X';
+    text-align: center;
+    margin-top: 4rem;
+    font-weight: 100;
+    font-size: 3rem;
+    color: #999999;
+}
+
+.main__row__col__left__price {
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+    border-top: .5px solid rgba(255, 255, 255, .4);
+    justify-content: center;
+    margin-top: 6rem;
+    padding: 4rem 0;
+    display: flex;
+    width: 70%;
+}
+
+.main__row__col__left__price__cart {
+    height: 6rem;
+    border: none;
+    font-size: 2.4rem;
+    line-height: 100%;
+    font-weight: bolder;
+    border: 1px solid rgb(50, 49, 49);
+    background: transparent;
+    color: white;
+    font-family: 'George X';
+    padding: .5rem 4rem;
+}
+
+.main__row__col__left__price__cart:hover {
+    background: rgb(50, 49, 49);
+}
+
+/* Gallery */
+
+.gallery {
+    justify-content: center;
+    background: #080808;
+    align-items: center;
+    display: flex;
+    height: 140vh;
+}
+
+.gallery__content {
+    text-align: center;
+    width: 70%;
+}
+
+.gallery__content__title {
+    font-family: 'Glimmer';
+    margin-bottom: 12rem;
+    -webkit-text-stroke: .05rem;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    font-size: 6rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+    border-top: .5px solid rgba(255, 255, 255, .4);
+    padding: 4rem 0;
+}
+
+.gallery__content__box {
+    display: flex;
+    height: 70rem;
+}
+
+.gallery__content__box__left {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.gallery__content__box__left__item {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    transition: .4s;
+    opacity: 0;
+}
+
+.gallery__content__box__right__control__next,
+.gallery__content__box__right__control__prev {
+    -webkit-text-stroke: .001rem;
+    -webkit-text-stroke-color: white;
+    background: transparent;
+    font-family: 'Glimmer';
+    height: max-content;
+    font-weight: bold;
+    font-size: 3rem;
+    color: transparent;
+    border: none;
+}
+
+.gallery__content__box__right__control__prev .arrow,
+.gallery__content__box__right__control__next .arrow {
+    position: relative;
+    transition: .5s;
+}
+
+.gallery__content__box__right__control__prev:hover .arrow {
+    left: -2rem;
+}
+
+.gallery__content__box__right__control__next:hover .arrow {
+    right: -2rem;
+}
+
+.gallery__content__box__right {
+    background: #080808;
+    position: relative;
+    margin-left: 16rem;
+    flex-wrap: wrap;
+    height: 110%;
+    width: 120%;
+    z-index: 5;
+    top: -5%;
+}
+
+.gallery__content__box__right__title {
+    background: transparent;
+    font-family: 'Glimmer';
+    height: max-content;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    color: white;
+    border: none;
+}
+
+.gallery__content__box__right__description {
+    width: 70%;
+    color: white;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 100;
+    font-size: 2.6rem;
+    color: #999999;
+    font-family: 'George X';
+}
+
+.gallery__content__box__right__subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 100;
+    color: #383838;
+}
+
+[data-slider-item].active {
+    opacity: 1;
+}
+
+.details {
+    text-align: start;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 6rem;
+}
+
+.point {
+    color: white;
+    font-size: 3rem;
+}
+
+/* Contact */
+
+.contact {
+    background: #0a0a0c;
+    width: 100%;
+    height: 100vh;
+}
+
+.contact__row {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.contact__row__col__left {
+    padding: 0 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact__row__col__left__wrapper {
+    height: 100vh;
+}
+
+.contact__row__col__right {
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.contact__row__col__right__title {
+    width: 90%;
+    text-align: center;
+    font-family: 'Glimmer';
+    margin-bottom: 4rem;
+    -webkit-text-stroke: .05rem;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    font-size: 6rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .4);
+    border-top: .5px solid rgba(255, 255, 255, .4);
+    padding: 4rem 0;
+}
+
+.contact__row__col__right__subtitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 100;
+    color: #383838;
+    margin-bottom: 4rem;
+}
+
+.contact__row__col__right__form {
+    width: 90%;
+}
+
+.contact__row__col__right__label {
+    -webkit-text-stroke: .001rem;
+    -webkit-text-stroke-color: white;
+    background: transparent;
+    font-family: 'Glimmer';
+    height: max-content;
+    font-weight: bold;
+    font-size: 3rem;
+    color: transparent;
+    border: none;
+}
+
+.contact__row__col__right__input {
+    width: 100%;
+    padding: 2rem !important;
+    font-size: 3rem !important;
+    font-family: "George X";
+    font-weight: bolder;
+    border: none;
+    border-bottom: 2px solid white;
+    background: transparent;
+    color: white;
+}
+
+.contact__row__col__right__input:focus-within {
+    outline: none;
+    box-shadow: none;
+}
+
+.contact__row__col__right__button {
+    height: 6rem;
+    border: none;
+    font-size: 2.4rem;
+    line-height: 100%;
+    font-weight: bolder;
+    border: 1px solid rgb(50, 49, 49);
+    background: transparent;
+    color: white;
+    font-family: 'George X';
+    padding: .5rem 4rem;
+}
+
+.contact__row__col__right__button:hover {
+    background: rgb(50, 49, 49);
+}
+
+/* Footer */
+
+.footer {
+    height: 25vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer__copyright {
+    color: white;
+    font-family: 'Glimmer';
+    font-size: 2rem;
+    padding: 4rem 0;
+}
+
+.footer__copyright button {
+    background: none;
+    color: white;
+    border: none;
+}
+
+.footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 4rem 0;
+    border-bottom: 2px solid white;
+}
+
+.footer__links__link {
+    position: relative;
+    text-decoration: none;
+    -webkit-text-stroke: .001rem;
+    -webkit-text-stroke-color: white;
+    background: transparent;
+    font-family: 'Glimmer';
+    height: max-content;
+    font-weight: bold;
+    font-size: 3rem;
+    color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+}
+
+.footer__links__link:hover {
+    color: transparent;
+    border-bottom: 2px solid white;
 }
